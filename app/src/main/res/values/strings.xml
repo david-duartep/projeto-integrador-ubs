@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">ProjetoIntegradorUbs</string>
+    <string name="login">Login</string>
+    <string name="todo">TODO</string>
+    <string name="entrar">Entrar</string>
+    <string name="digite_email">Digite seu e-mail</string>
+    <string name="email">email</string>
+    <string name="digite_senha">Digite sua senha</string>
+    <string name="password">TODO</string>
+    <string name="ubs">UBS+</string>
+    <string name="menu_principal">Menu principal</string>
+    <string name="perfil_usuario">Perfil do usuário</string>
+    <string name="consultas">TODO</string>
+    <string name="imagem_agendar">TODO</string>
+    <string name="historico_consultas">Histórico de consultas</string>
+    <string name="imagem_usuario">TODO</string>
+    <string name="imagem_historico">TODO</string>
+    <string name="agendar_consultas">Agendar consultas</string>
+    <string name="voltar">Voltar</string>
+    <string name="consultas_agendadas">Consultas agendadas</string>
 </resources>
