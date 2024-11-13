@@ -1,35 +1,22 @@
 package com.example.projetointegradorubs
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.projetointegradorubs.databinding.ActivityMainBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.example.projetointegradorubs.databinding.ActivityScheduleBinding
 
-@Suppress("NAME_SHADOWING")
-class MainActivity : AppCompatActivity() {
+class ScheduleActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-
+    private lateinit var binding: ActivityScheduleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
+        binding = ActivityScheduleBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(2000) // 2 segundos de atraso
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

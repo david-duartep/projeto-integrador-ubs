@@ -15,7 +15,12 @@
     <string name="historico_consultas">Histórico de consultas</string>
     <string name="imagem_usuario">TODO</string>
     <string name="imagem_historico">TODO</string>
-    <string name="agendar_consultas">Agendar consultas</string>
+    <string name="agendar_consultas">Agendar consulta</string>
     <string name="sair">Sair</string>
     <string name="consultas_agendadas">Consultas agendadas</string>
+    <string name="registro">Registre-se aqui</string>
+    <string name="pergunta_acesso">Ainda não possui um acesso?</string>
+    <string name="title_activity_schedule">ScheduleActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

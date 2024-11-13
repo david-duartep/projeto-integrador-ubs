@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.ProjetoIntegradorUbs" parent="Base.Theme.ProjetoIntegradorUbs" />
+    <style name="Theme.ProjetoIntegradorUbs.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.ProjetoIntegradorUbs.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.ProjetoIntegradorUbs.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
