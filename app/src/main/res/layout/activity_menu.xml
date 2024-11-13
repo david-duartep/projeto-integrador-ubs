@@ -12,97 +12,75 @@
         android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_menu"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="37dp"
         android:backgroundTint="#0F3D6F"
-        android:text="@string/voltar"
+        android:text="@string/sair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_user_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/button_user_profile" />
 
-    <TextView
-        android:id="@+id/textView_schedule"
+    <Button
+        android:id="@+id/button_schedule"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/agendar_consultas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_schedule"
-        app:layout_constraintTop_toTopOf="@+id/image_schedule" />
+        app:icon="@drawable/calendar"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_menu" />
 
-    <TextView
-        android:id="@+id/textView_history"
+    <Button
+        android:id="@+id/button_history"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/historico_consultas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_history"
-        app:layout_constraintTop_toTopOf="@+id/image_history" />
+        app:icon="@drawable/edit"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button_consult"
+        app:layout_constraintTop_toBottomOf="@+id/button_consult" />
 
-    <ImageView
-        android:id="@+id/image_history"
+    <Button
+        android:id="@+id/button_consult"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/imagem_historico"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_consult"
-        app:srcCompat="@drawable/edit" />
-
-    <TextView
-        android:id="@+id/textView_consult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/consultas_agendadas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_consult"
-        app:layout_constraintTop_toTopOf="@+id/image_consult" />
-
-    <ImageView
-        android:id="@+id/image_user_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/imagem_usuario"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_history"
-        app:srcCompat="@drawable/user" />
-
-    <ImageView
-        android:id="@+id/image_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:contentDescription="@string/imagem_agendar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/calendar" />
+        app:icon="@drawable/calendar_checked"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button_schedule"
+        app:layout_constraintTop_toBottomOf="@+id/button_schedule" />
 
     <TextView
         android:id="@+id/textView_logo"
@@ -117,42 +95,45 @@
         app:layout_constraintBottom_toBottomOf="@+id/image_logo"
         app:layout_constraintStart_toStartOf="@+id/image_logo" />
 
-    <ImageView
-        android:id="@+id/image_consult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/consultas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_schedule"
-        app:srcCompat="@drawable/calendar_checked" />
-
     <TextView
         android:id="@+id/textView_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="9dp"
         android:text="@string/menu_principal"
         android:textColor="#0F3D6F"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView_schedule"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
 
-    <TextView
-        android:id="@+id/textView_user_profile"
+    <Button
+        android:id="@+id/button_user_profile"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/perfil_usuario"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_user_profile"
-        app:layout_constraintTop_toTopOf="@+id/image_user_profile" />
+        app:icon="@drawable/user"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button_history"
+        app:layout_constraintTop_toBottomOf="@+id/button_history" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_Exit"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_exit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

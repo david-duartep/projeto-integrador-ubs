@@ -6,26 +6,22 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.projetointegradorubs.databinding.ActivityLoginBinding
+import com.example.projetointegradorubs.databinding.ActivityMenuBinding
 
-class LoginActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivityMenuBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        binding.buttonLogin.setOnClickListener {
-            binding.progressBarLogin.visibility = android.view.View.VISIBLE
-            val intent = Intent(this,MenuActivity::class.java)
+        binding.buttonExit.setOnClickListener {
+            binding.progressBarExit.visibility = android.view.View.VISIBLE
+            val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
-        }
-
-        binding.buttonRegister.setOnClickListener {
-            binding.progressBarLogin.visibility = android.view.View.VISIBLE
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

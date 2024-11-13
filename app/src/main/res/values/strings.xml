@@ -16,6 +16,6 @@
     <string name="imagem_usuario">TODO</string>
     <string name="imagem_historico">TODO</string>
     <string name="agendar_consultas">Agendar consultas</string>
-    <string name="voltar">Voltar</string>
+    <string name="sair">Sair</string>
     <string name="consultas_agendadas">Consultas agendadas</string>
 </resources>
