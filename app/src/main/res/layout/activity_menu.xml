@@ -5,37 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/transparent_background"
-    tools:context=".MainActivity">
+    android:background="@drawable/background"
+    tools:context=".MenuActivity">
 
-    <ImageView
-        android:id="@+id/image_logo"
+    <TextView
+        android:id="@+id/textView_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintStart_toStartOf="@+id/textView_menu"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <Button
-        android:id="@+id/button_exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:backgroundTint="#0F3D6F"
-        android:text="@string/sair"
+        android:layout_marginTop="50dp"
+        android:text="@string/menu_principal"
+        android:textColor="#2F4C73"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_user_profile" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_schedule"
+        android:id="@+id/button_newAppointment"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="100dp"
         android:clickable="true"
         android:focusable="true"
@@ -47,74 +38,16 @@
         app:icon="@drawable/calendar"
         app:iconTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_menu" />
 
     <Button
-        android:id="@+id/button_history"
+        android:id="@+id/button_userProfile"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/historico_consultas"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#0F3D6F"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:icon="@drawable/edit"
-        app:iconTint="#000000"
-        app:layout_constraintStart_toStartOf="@+id/button_consult"
-        app:layout_constraintTop_toBottomOf="@+id/button_consult" />
-
-    <Button
-        android:id="@+id/button_consult"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/consultas_agendadas"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#0F3D6F"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:icon="@drawable/calendar_checked"
-        app:iconTint="#000000"
-        app:layout_constraintStart_toStartOf="@+id/button_schedule"
-        app:layout_constraintTop_toBottomOf="@+id/button_schedule" />
-
-    <TextView
-        android:id="@+id/textView_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="21dp"
-        android:text="@string/ubs"
-        android:textColor="#0F3D6F"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/image_logo"
-        app:layout_constraintStart_toStartOf="@+id/image_logo" />
-
-    <TextView
-        android:id="@+id/textView_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="@string/menu_principal"
-        android:textColor="#2F4C73"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_logo" />
-
-    <Button
-        android:id="@+id/button_user_profile"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/perfil_usuario"
@@ -136,6 +69,55 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_exit" />
+        app:layout_constraintTop_toBottomOf="@+id/button_exit"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/button_scheduled"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/consultas_agendadas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#0F3D6F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/calendar_checked"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button_newAppointment"
+        app:layout_constraintTop_toBottomOf="@+id/button_newAppointment" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/sair"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_userProfile" />
+
+    <Button
+        android:id="@+id/button_history"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/historico_consultas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#0F3D6F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/edit"
+        app:iconTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button_scheduled"
+        app:layout_constraintTop_toBottomOf="@+id/button_scheduled" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

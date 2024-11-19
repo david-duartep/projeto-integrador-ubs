@@ -29,7 +29,7 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.buttonSchedule.setOnClickListener {
+        binding.buttonNewAppointment.setOnClickListener {
             binding.progressBarExit.visibility = android.view.View.VISIBLE
             val intent = Intent(this,ScheduleActivity::class.java)
             startActivity(intent)

@@ -23,4 +23,14 @@
     <string name="title_activity_schedule">ScheduleActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string-array name="spinner_options">
+        <item>Clinico Geral</item>
+        <item>Dermatologista</item>
+        <item>Pediatra</item>
+        <item>Ginecologista</item>
+        <item>Urologista</item>
+        <item>Geriatra</item>
+        <item>Ortopedista</item>
+        <item>Vacinas</item>
+    </string-array>
 </resources>

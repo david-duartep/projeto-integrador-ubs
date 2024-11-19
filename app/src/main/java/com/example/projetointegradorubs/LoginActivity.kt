@@ -27,6 +27,8 @@ class LoginActivity : AppCompatActivity() {
 
         binding.buttonRegister.setOnClickListener {
             binding.progressBarLogin.visibility = android.view.View.VISIBLE
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
