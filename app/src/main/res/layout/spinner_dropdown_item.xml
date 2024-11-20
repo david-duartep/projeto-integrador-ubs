@@ -7,4 +7,4 @@
     android:textColor="@color/blue"
     android:textStyle="bold"
     android:gravity="center"
-    android:background="@drawable/rounded_spinner" />
+    android:background="@drawable/spinner_dropdown_item_background"/>

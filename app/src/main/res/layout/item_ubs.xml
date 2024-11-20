@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rv_background"
+    android:elevation="4dp">
+
+    <!-- Nome da UBS -->
+    <TextView
+        android:id="@+id/tvUBSName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UBS Exemplo"
+        android:textSize="18sp"
+        android:textColor="@color/blue"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Endereço da UBS -->
+    <TextView
+        android:id="@+id/tvUBSAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Endereço: Rua ABC, 123"
+        android:textSize="14sp"
+        android:textColor="@color/navy_blue" />
+
+</LinearLayout>

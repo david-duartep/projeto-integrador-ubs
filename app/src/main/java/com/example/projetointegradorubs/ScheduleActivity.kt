@@ -1,6 +1,8 @@
 package com.example.projetointegradorubs
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -27,7 +29,7 @@ class ScheduleActivity : AppCompatActivity() {
 
         )
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spinnerSpecialty.adapter = adapter
 
         binding.spinnerSpecialty.setOnItemSelectedListener(object : android.widget.AdapterView.OnItemSelectedListener {
@@ -41,12 +43,23 @@ class ScheduleActivity : AppCompatActivity() {
             }
         })
 
+        binding.buttonSchedule.setOnClickListener {
+            binding.progressBarSchedule.visibility = android.view.View.VISIBLE
+            val intent = Intent(this,ChooseUBSActivity::class.java)
+            startActivity(intent)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+    }
+    override fun onResume() {
+        super.onResume()
+        // Parar a animação e esconder a ProgressBar quando voltar para esta Activity
+        binding.progressBarSchedule.visibility = View.GONE
     }
 
 }

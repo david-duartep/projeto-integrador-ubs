@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".CalendarActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="Escolha uma data"
+        android:textStyle="bold"
+        android:textColor="@color/navy_blue"
+        android:textSize="24sp" />
+
+    <!-- CalendarView para selecionar a data -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/calendar_view"
+        android:dateTextAppearance="@style/DateTextStyle"
+        android:showWeekNumber="false" />
+
+    <!-- Botão para agendar a consulta -->
+    <Button
+        android:id="@+id/buttonSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:enabled="false"
+        android:text="Agendar Consulta" /> <!-- Inicialmente desabilitado -->
+
+</LinearLayout>
