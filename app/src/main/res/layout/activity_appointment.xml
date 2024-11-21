@@ -16,13 +16,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Data Selecionada: "
-        android:textSize="18sp" />
+        android:textColor="@color/navy_blue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Selecione um horário:"
+        android:textColor="@color/navy_blue"
+        android:textSize="16sp" />
 
     <!-- Spinner para selecionar o horário -->
     <Spinner
         android:id="@+id/spinnerTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_spinner"
+        android:baselineAligned="false"
+        android:textAlignment="center" />
 
     <!-- Botão para confirmar o agendamento -->
     <Button
@@ -30,5 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
         android:text="Confirmar Agendamento" />
 </LinearLayout>

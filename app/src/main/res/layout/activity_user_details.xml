@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informações pessoais"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/navy_blue"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Título -->
+    <LinearLayout
+        android:id="@+id/userInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Nome Completo -->
+        <TextView
+            android:id="@+id/textViewFullNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome Completo:"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textViewFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="João da Silva"
+            android:textSize="18sp"
+            android:textColor="@color/navy_blue"
+            android:paddingBottom="16dp" />
+
+        <!-- Telefone -->
+        <TextView
+            android:id="@+id/textViewPhoneLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefone Cadastrado:"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(11) 98765-4321"
+            android:textSize="18sp"
+            android:textColor="@color/navy_blue"
+            android:paddingBottom="16dp" />
+
+        <!-- Endereço -->
+        <TextView
+            android:id="@+id/textViewAddressLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Endereço Completo:"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rua das Flores, 123, São Paulo - SP"
+            android:textSize="18sp"
+            android:textColor="@color/navy_blue"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Voltar"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

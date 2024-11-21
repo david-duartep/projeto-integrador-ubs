@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".HistoryActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textView_HistoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"
+        android:text="Histórico de Consultas"
+        android:textColor="@color/navy_blue"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView para exibir as consultas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_History"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

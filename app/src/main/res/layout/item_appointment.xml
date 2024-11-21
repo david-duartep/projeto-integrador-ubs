@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rv_background">
+
+
+    <TextView
+        android:id="@+id/textViewAppointmentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Consulta"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewUBS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navy_blue"
+        android:text="UBS"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navy_blue"
+        android:text="Data"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navy_blue"
+        android:text="Horário"
+        android:textSize="14sp" />
+
+
+    <!-- Botões CRUD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <!-- Editar -->
+        <Button
+            android:id="@+id/buttonEdit"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="11sp"
+            android:text="Remarcar"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white" />
+
+        <!-- Excluir -->
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:textSize="11sp"
+            android:text="Cancelar"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+</LinearLayout>

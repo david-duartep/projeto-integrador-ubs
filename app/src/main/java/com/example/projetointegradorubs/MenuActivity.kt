@@ -17,6 +17,14 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMenuBinding
     private lateinit var launcher: ActivityResultLauncher<Intent>
 
+    private fun showProgressBar() {
+        setContentView(R.layout.progress_layout)
+    }
+
+    private fun hideProgressBar() {
+        setContentView(binding.root)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuBinding.inflate(layoutInflater)
@@ -24,17 +32,34 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonExit.setOnClickListener {
-            binding.progressBarExit.visibility = android.view.View.VISIBLE
+            showProgressBar()
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonNewAppointment.setOnClickListener {
-            binding.progressBarExit.visibility = android.view.View.VISIBLE
+            showProgressBar()
             val intent = Intent(this,ScheduleActivity::class.java)
             startActivity(intent)
         }
 
+        binding.buttonScheduled.setOnClickListener {
+            showProgressBar()
+            val intent = Intent(this,AppointmentDetailsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.buttonHistory.setOnClickListener {
+            showProgressBar()
+            val intent = Intent(this,HistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.buttonUserProfile.setOnClickListener {
+            showProgressBar()
+            val intent = Intent(this,UserDetailsActivity::class.java)
+            startActivity(intent)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -44,7 +69,6 @@ class MenuActivity : AppCompatActivity() {
     }
     override fun onResume() {
         super.onResume()
-        // Parar a animação e esconder a ProgressBar quando voltar para esta Activity
-        binding.progressBarExit.visibility = View.GONE
+        hideProgressBar()
     }
 }

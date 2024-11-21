@@ -32,8 +32,9 @@ class CalendarActivity : AppCompatActivity() {
 
         // Configura a data mínima para a seleção (data atual)
         val calendar = Calendar.getInstance()
-        val currentDate = calendar.timeInMillis
-        binding.calendarView.minDate = currentDate  // Desabilita todas as datas passadas
+        calendar.add(Calendar.DAY_OF_YEAR, 2) // Adiciona dois dias à data atual
+        val minDate = calendar.timeInMillis
+        binding.calendarView.minDate = minDate // Desabilita datas antes de dois dias
 
         // Configura a data máxima para a seleção (20 dias após a data atual)
         calendar.add(Calendar.DAY_OF_YEAR, 20)

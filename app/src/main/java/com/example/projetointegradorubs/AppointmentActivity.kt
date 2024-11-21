@@ -27,11 +27,11 @@ class AppointmentActivity : AppCompatActivity() {
         binding.textViewSelectedDate.text = "Data Selecionada: $selectedDate"
 
         // Lista de horários pré-definidos
-        val availableTimes = arrayOf("08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00")
+        val availableTimes = arrayOf("08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00")
 
         // Cria o ArrayAdapter com os horários disponíveis
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, availableTimes)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adapter = ArrayAdapter(this, R.layout.spinner_selected_item, availableTimes)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
 
         // Configura o Spinner com o Adapter
         binding.spinnerTime.adapter = adapter

@@ -13,6 +13,14 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
 
+    private fun showProgressBar() {
+        setContentView(R.layout.progress_layout)
+    }
+
+    private fun hideProgressBar() {
+        setContentView(binding.root)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -20,13 +28,13 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonLogin.setOnClickListener {
-            binding.progressBarLogin.visibility = android.view.View.VISIBLE
+            showProgressBar()
             val intent = Intent(this,MenuActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonRegister.setOnClickListener {
-            binding.progressBarLogin.visibility = android.view.View.VISIBLE
+            showProgressBar()
             val intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
         }
@@ -40,6 +48,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         // Parar a animação e esconder a ProgressBar quando voltar para esta Activity
-        binding.progressBarLogin.visibility = View.GONE
+        hideProgressBar()
     }
 }

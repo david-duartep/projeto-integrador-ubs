@@ -16,6 +16,14 @@ class ScheduleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScheduleBinding
 
+    private fun showProgressBar() {
+        setContentView(R.layout.progress_layout)
+    }
+
+    private fun hideProgressBar() {
+        setContentView(binding.root)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,7 +52,7 @@ class ScheduleActivity : AppCompatActivity() {
         })
 
         binding.buttonSchedule.setOnClickListener {
-            binding.progressBarSchedule.visibility = android.view.View.VISIBLE
+            showProgressBar()
             val intent = Intent(this,ChooseUBSActivity::class.java)
             startActivity(intent)
         }
@@ -59,7 +67,7 @@ class ScheduleActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         // Parar a animação e esconder a ProgressBar quando voltar para esta Activity
-        binding.progressBarSchedule.visibility = View.GONE
+        hideProgressBar()
     }
 
 }
