@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Cadastro"
+        android:text="@string/cadastro"
         android:textColor="@color/navy_blue"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -24,81 +24,92 @@
 
     <!-- Nome Completo -->
     <EditText
-        android:id="@+id/editText_FullName"
+        android:id="@+id/editText_fullName"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:backgroundTint="@color/black"
-        android:hint="Nome Completo"
+        android:hint="@string/nome_completo"
         android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/blue"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="TextFields" />
 
     <!-- E-mail -->
     <EditText
-        android:id="@+id/editText_Email"
+        android:id="@+id/editText_registerEmail"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:backgroundTint="@color/black"
-        android:hint="E-mail"
+        android:hint="@string/email"
         android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/blue"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="TextFields" />
 
     <!-- Telefone -->
     <EditText
-        android:id="@+id/editText_Phone"
+        android:id="@+id/editText_phone"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:backgroundTint="@color/black"
-        android:hint="Telefone"
+        android:hint="@string/telefone"
         android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/blue"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="TextFields" />
 
     <!-- CPF -->
     <EditText
-        android:id="@+id/editText_Cpf"
+        android:id="@+id/editText_cpf"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:backgroundTint="@color/black"
-        android:hint="CPF"
+        android:hint="@string/cpf"
         android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/blue"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="TextFields" />
 
     <!-- Endereço Completo -->
     <EditText
-        android:id="@+id/editText_Address"
+        android:id="@+id/editText_address"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:backgroundTint="@color/black"
-        android:hint="Endereço Completo"
+        android:hint="@string/endere_o_completo"
         android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/blue"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="TextFields" />
 
     <!-- Senha -->
     <EditText
-        android:id="@+id/editText_Password"
+        android:id="@+id/editText_registerPassword"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:backgroundTint="@color/black"
-        android:hint="Senha"
+        android:hint="@string/senha"
         android:inputType="textPassword"
         android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/blue"
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black"
         android:layout_gravity="center_horizontal" />
 
     <!-- Botão de Registro -->
@@ -109,7 +120,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="76dp"
         android:backgroundTint="@color/blue"
-        android:text="Cadastrar"
+        android:text="@string/cadastrar"
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal" />
 

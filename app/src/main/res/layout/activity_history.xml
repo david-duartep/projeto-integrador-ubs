@@ -11,12 +11,12 @@
 
     <!-- Título -->
     <TextView
-        android:id="@+id/textView_HistoryTitle"
+        android:id="@+id/textView_historyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="16dp"
-        android:text="Histórico de Consultas"
+        android:text="@string/historico_de_consultas"
         android:textColor="@color/navy_blue"
         android:textSize="20sp"
         android:textStyle="bold" />

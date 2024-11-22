@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="0dp"
     tools:context=".ChooseUBSActivity">
 
     <!-- Título ou Cabeçalho -->
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/TextView_chooseUbs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Escolha uma UBS próxima"
+        android:text="@string/escolha_uma_ubs_proxima"
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textStyle="bold"
@@ -25,6 +25,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewUBS"
         android:layout_width="match_parent"
+        android:padding="5dp"
         android:layout_height="match_parent" />
 
 </LinearLayout>

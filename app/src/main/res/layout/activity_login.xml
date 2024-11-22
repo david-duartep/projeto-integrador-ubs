@@ -18,7 +18,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editText_email"
+        android:id="@+id/editText_loginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -30,11 +30,11 @@
         android:hint="@string/digite_email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        android:textColor="#0D0D0D"
-        android:textColorHint="@color/navy_blue" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/editText_password"
+        android:id="@+id/editText_loginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -46,17 +46,17 @@
         android:hint="@string/digite_senha"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/navy_blue" />
+        android:textColor="@color/navy_blue"
+        android:textColorHint="@color/black" />
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#F24171"
+        android:backgroundTint="@color/pink"
         android:text="@string/entrar"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <TextView

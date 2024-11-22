@@ -29,13 +29,13 @@ class LoginActivity : AppCompatActivity() {
 
         binding.buttonLogin.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,MenuActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonRegister.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,RegisterActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
@@ -45,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
     }
+
     override fun onResume() {
         super.onResume()
         // Parar a animação e esconder a ProgressBar quando voltar para esta Activity

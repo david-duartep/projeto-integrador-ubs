@@ -40,10 +40,20 @@ class ScheduleActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spinnerSpecialty.adapter = adapter
 
-        binding.spinnerSpecialty.setOnItemSelectedListener(object : android.widget.AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: android.widget.AdapterView<*>?, view: android.view.View?, position: Int, id: Long) {
+        binding.spinnerSpecialty.setOnItemSelectedListener(object :
+            android.widget.AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: android.widget.AdapterView<*>?,
+                view: android.view.View?,
+                position: Int,
+                id: Long
+            ) {
                 val selectedOption = parent?.getItemAtPosition(position).toString()
-                Toast.makeText(this@ScheduleActivity, "Selecionado: $selectedOption", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@ScheduleActivity,
+                    "Selecionado: $selectedOption",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
             override fun onNothingSelected(parent: android.widget.AdapterView<*>?) {
@@ -53,7 +63,7 @@ class ScheduleActivity : AppCompatActivity() {
 
         binding.buttonSchedule.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,ChooseUBSActivity::class.java)
+            val intent = Intent(this, ChooseUBSActivity::class.java)
             startActivity(intent)
         }
 
@@ -64,6 +74,7 @@ class ScheduleActivity : AppCompatActivity() {
         }
 
     }
+
     override fun onResume() {
         super.onResume()
         // Parar a animação e esconder a ProgressBar quando voltar para esta Activity

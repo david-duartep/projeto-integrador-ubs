@@ -10,20 +10,20 @@
 
     <!-- Nome da UBS -->
     <TextView
-        android:id="@+id/tvUBSName"
+        android:id="@+id/textView_ubsName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="UBS Exemplo"
+        android:text=""
         android:textSize="18sp"
         android:textColor="@color/blue"
         android:layout_marginBottom="4dp" />
 
     <!-- Endereço da UBS -->
     <TextView
-        android:id="@+id/tvUBSAddress"
+        android:id="@+id/textView_ubsAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Endereço: Rua ABC, 123"
+        android:text=""
         android:textSize="14sp"
         android:textColor="@color/navy_blue" />
 

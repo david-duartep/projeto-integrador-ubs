@@ -8,10 +8,10 @@
     android:padding="16dp" >
 
     <TextView
-        android:id="@+id/textViewInfo"
+        android:id="@+id/textView_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Informações pessoais"
+        android:text="@string/informacoes_pessoais"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textColor="@color/navy_blue"
@@ -30,71 +30,72 @@
 
         <!-- Nome Completo -->
         <TextView
-            android:id="@+id/textViewFullNameLabel"
+            android:id="@+id/textView_FullNameLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nome Completo:"
+            android:text="@string/nome_completo_label"
             android:textSize="16sp"
             android:textColor="@color/navy_blue"
             android:textStyle="bold"
             android:paddingBottom="4dp" />
 
         <TextView
-            android:id="@+id/textViewFullName"
+            android:id="@+id/textView_FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="João da Silva"
+            android:text=""
             android:textSize="18sp"
             android:textColor="@color/navy_blue"
             android:paddingBottom="16dp" />
 
         <!-- Telefone -->
         <TextView
-            android:id="@+id/textViewPhoneLabel"
+            android:id="@+id/textView_PhoneLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Telefone Cadastrado:"
+            android:text="@string/telefone_cadastrado_label"
             android:textSize="16sp"
             android:textColor="@color/navy_blue"
             android:textStyle="bold"
             android:paddingBottom="4dp" />
 
         <TextView
-            android:id="@+id/textViewPhone"
+            android:id="@+id/textView_Phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="(11) 98765-4321"
+            android:text=""
             android:textSize="18sp"
             android:textColor="@color/navy_blue"
             android:paddingBottom="16dp" />
 
         <!-- Endereço -->
         <TextView
-            android:id="@+id/textViewAddressLabel"
+            android:id="@+id/textView_AddressLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Endereço Completo:"
+            android:text="@string/endereco_completo_label"
             android:textSize="16sp"
             android:textColor="@color/navy_blue"
             android:textStyle="bold"
             android:paddingBottom="4dp" />
 
         <TextView
-            android:id="@+id/textViewAddress"
+            android:id="@+id/textView_Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rua das Flores, 123, São Paulo - SP"
+            android:text=""
             android:textSize="18sp"
             android:textColor="@color/navy_blue"
             android:paddingBottom="16dp" />
 
         <Button
+            android:id="@+id/button_back"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:text="Voltar"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/blue"
-            android:layout_gravity="center"/>
+            android:text="@string/voltar" />
 
     </LinearLayout>
 

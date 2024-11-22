@@ -27,11 +27,12 @@ class UBSAdapter(private val ubsList: List<UBS>, private val listener: (UBS) -> 
     override fun getItemCount(): Int = ubsList.size
 
     // ViewHolder com ViewBinding
-    class UBSViewHolder(private val binding: ItemUbsBinding) : RecyclerView.ViewHolder(binding.root) {
+    class UBSViewHolder(private val binding: ItemUbsBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(ubs: UBS, listener: (UBS) -> Unit) {
-            binding.tvUBSName.text = ubs.name
-            binding.tvUBSAddress.text = ubs.address
+            binding.textViewUbsName.text = ubs.name
+            binding.textViewUbsAddress.text = ubs.address
 
             binding.root.setOnClickListener {
                 listener(ubs)

@@ -33,7 +33,7 @@ class ChooseUBSActivity : AppCompatActivity() {
         val adapter = UBSAdapter(ubsList) { ubs ->
             // Ação ao clicar em uma UBS
             Toast.makeText(this, "Selecionou: ${ubs.name}", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this,CalendarActivity::class.java)
+            val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
 

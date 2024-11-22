@@ -12,20 +12,20 @@
 
     <!-- Exibe a data selecionada -->
     <TextView
-        android:id="@+id/textViewSelectedDate"
+        android:id="@+id/textView_selectedDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data Selecionada: "
+        android:text="@string/data_selecionada"
         android:textColor="@color/navy_blue"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textViewTime"
+        android:id="@+id/textView_Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Selecione um horário:"
+        android:text="@string/selecione_um_horario"
         android:textColor="@color/navy_blue"
         android:textSize="16sp" />
 
@@ -41,10 +41,10 @@
 
     <!-- Botão para confirmar o agendamento -->
     <Button
-        android:id="@+id/buttonConfirm"
+        android:id="@+id/button_Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/blue"
-        android:text="Confirmar Agendamento" />
+        android:text="@string/confirmar_agendamento" />
 </LinearLayout>

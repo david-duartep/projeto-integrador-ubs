@@ -27,7 +27,8 @@ class AppointmentActivity : AppCompatActivity() {
         binding.textViewSelectedDate.text = "Data Selecionada: $selectedDate"
 
         // Lista de horários pré-definidos
-        val availableTimes = arrayOf("08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00")
+        val availableTimes =
+            arrayOf("08:00", "09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00")
 
         // Cria o ArrayAdapter com os horários disponíveis
         val adapter = ArrayAdapter(this, R.layout.spinner_selected_item, availableTimes)
@@ -43,14 +44,23 @@ class AppointmentActivity : AppCompatActivity() {
             // Verifica se o usuário selecionou o horário
             if (selectedTime.isNotEmpty()) {
                 // Mostra um Toast confirmando o agendamento
-                Toast.makeText(this, "Consulta agendada para $selectedDate às $selectedTime", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Consulta agendada para $selectedDate às $selectedTime",
+                    Toast.LENGTH_SHORT
+                ).show()
                 // Cria uma intent para voltar à MenuActivity
                 val intent = Intent(this, MenuActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Garante que as atividades anteriores são limpas
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_CLEAR_TOP // Garante que as atividades anteriores são limpas
                 startActivity(intent) // Abre a MenuActivity
                 finish() // Finaliza a AppointmentActivity
             } else {
-                Toast.makeText(this, "Por favor, selecione o horário da consulta", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Por favor, selecione o horário da consulta",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
         }

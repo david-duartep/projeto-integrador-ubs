@@ -33,31 +33,31 @@ class MenuActivity : AppCompatActivity() {
 
         binding.buttonExit.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonNewAppointment.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,ScheduleActivity::class.java)
+            val intent = Intent(this, ScheduleActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonScheduled.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,AppointmentDetailsActivity::class.java)
+            val intent = Intent(this, AppointmentDetailsActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonHistory.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,HistoryActivity::class.java)
+            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
 
         binding.buttonUserProfile.setOnClickListener {
             showProgressBar()
-            val intent = Intent(this,UserDetailsActivity::class.java)
+            val intent = Intent(this, UserDetailsActivity::class.java)
             startActivity(intent)
         }
 
@@ -67,8 +67,19 @@ class MenuActivity : AppCompatActivity() {
             insets
         }
     }
+
     override fun onResume() {
         super.onResume()
         hideProgressBar()
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // Cria uma Intent para navegar para a tela de login
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+        finish() // Finaliza a atividade atual para evitar que ela seja reaberta ao pressionar "Voltar"
     }
 }

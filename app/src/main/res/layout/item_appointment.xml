@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
+    android:layout_marginBottom="4dp"
     android:background="@drawable/rv_background">
 
 
@@ -12,7 +13,7 @@
         android:id="@+id/textViewAppointmentType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tipo de Consulta"
+        android:text="@string/tipo_de_consulta"
         android:textColor="@color/blue"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/navy_blue"
-        android:text="UBS"
+        android:text="@string/ubs"
         android:textSize="14sp" />
 
     <TextView
@@ -30,20 +31,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/navy_blue"
-        android:text="Data"
+        android:text="@string/data"
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textViewTime"
+        android:id="@+id/textView_Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/navy_blue"
-        android:text="Horário"
+        android:text="@string/horario"
         android:textSize="14sp" />
 
 
     <!-- Botões CRUD -->
     <LinearLayout
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -52,20 +54,22 @@
         <!-- Editar -->
         <Button
             android:id="@+id/buttonEdit"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:textSize="11sp"
-            android:text="Remarcar"
+            android:text="@string/remarcar"
             android:backgroundTint="@color/blue"
             android:textColor="@android:color/white" />
 
         <!-- Excluir -->
         <Button
             android:id="@+id/buttonDelete"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:textSize="11sp"
-            android:text="Cancelar"
+            android:text="@string/cancelar"
             android:backgroundTint="@color/red"
             android:textColor="@android:color/white"
             android:layout_marginStart="8dp" />
