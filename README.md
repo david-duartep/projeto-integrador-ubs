@@ -1,7 +1,5 @@
 # **UBS+** - Sistema de Agendamento de Consultas
 
-![Logo UBS+](url-da-imagem-do-logo)
-
 O **UBS+** é um aplicativo móvel desenvolvido para facilitar o agendamento de consultas médicas em unidades básicas de saúde (UBS). O sistema oferece uma interface intuitiva e fácil de usar, permitindo que os usuários selecionem a especialidade, escolha a UBS e agendem suas consultas de forma rápida e eficiente.
 
 ---
