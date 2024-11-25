@@ -31,4 +31,4 @@ O **UBS+** é um aplicativo móvel desenvolvido para facilitar o agendamento de 
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/usuario/UBS-plus.git
+git clone [https://github.com/usuario/UBS-plus.git](https://github.com/david-duartep/projeto-integrador-ubs.git)
