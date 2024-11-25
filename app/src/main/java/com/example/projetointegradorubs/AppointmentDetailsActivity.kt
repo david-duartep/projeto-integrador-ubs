@@ -69,7 +69,7 @@ class AppointmentDetailsActivity : AppCompatActivity() {
                         },
                         onDelete = { appointment ->
                             Toast.makeText(this, "Excluir: ${appointment.type}", Toast.LENGTH_SHORT).show()
-                            deleteAppointment(appointment)
+                            deleteAppointment()
                         }
                     )
                 }
@@ -81,7 +81,7 @@ class AppointmentDetailsActivity : AppCompatActivity() {
         }
     }
 
-    private fun deleteAppointment(appointment: Appointment) {
+    private fun deleteAppointment() {
         // Implemente a lógica para exclusive um agendamento do Firebase
         Toast.makeText(this, "Excluir agendamento ainda não implementado.", Toast.LENGTH_SHORT).show()
     }
