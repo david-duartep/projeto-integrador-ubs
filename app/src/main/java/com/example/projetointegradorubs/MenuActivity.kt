@@ -2,20 +2,16 @@ package com.example.projetointegradorubs
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.projetointegradorubs.databinding.ActivityMenuBinding
-import org.jetbrains.annotations.Async.Schedule
 
+@Suppress("DEPRECATION")
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
-    private lateinit var launcher: ActivityResultLauncher<Intent>
 
     private fun showProgressBar() {
         setContentView(R.layout.progress_layout)

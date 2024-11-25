@@ -2,14 +2,12 @@ package com.example.projetointegradorubs
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.projetointegradorubs.databinding.ActivityMainBinding
 import com.example.projetointegradorubs.databinding.ActivityScheduleBinding
 
 class ScheduleActivity : AppCompatActivity() {
@@ -40,7 +38,7 @@ class ScheduleActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spinnerSpecialty.adapter = adapter
 
-        binding.spinnerSpecialty.setOnItemSelectedListener(object :
+        binding.spinnerSpecialty.onItemSelectedListener = object :
             android.widget.AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: android.widget.AdapterView<*>?,
@@ -59,7 +57,7 @@ class ScheduleActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: android.widget.AdapterView<*>?) {
                 // Ação quando nenhuma opção é selecionada (opcional)
             }
-        })
+        }
 
         binding.buttonSchedule.setOnClickListener {
             showProgressBar()

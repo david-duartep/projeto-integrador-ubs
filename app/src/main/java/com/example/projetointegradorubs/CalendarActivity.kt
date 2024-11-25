@@ -1,9 +1,7 @@
 package com.example.projetointegradorubs
 
-import AppointmentActivity
 import android.content.Intent
 import android.os.Bundle
-import android.widget.CalendarView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +12,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
+@Suppress("DEPRECATION", "NAME_SHADOWING")
 class CalendarActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCalendarBinding

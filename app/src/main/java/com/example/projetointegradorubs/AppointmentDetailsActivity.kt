@@ -1,7 +1,5 @@
 package com.example.projetointegradorubs
 
-import Appointment
-import AppointmentAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
