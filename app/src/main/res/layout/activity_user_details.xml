@@ -16,7 +16,8 @@
         android:textSize="20sp"
         android:textColor="@color/navy_blue"
         android:textStyle="bold"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <!-- Título -->
     <LinearLayout
@@ -30,7 +31,7 @@
 
         <!-- Nome Completo -->
         <TextView
-            android:id="@+id/textView_FullNameLabel"
+            android:id="@+id/textView_fullNameLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/nome_completo_label"
@@ -40,7 +41,46 @@
             android:paddingBottom="4dp" />
 
         <TextView
-            android:id="@+id/textView_FullName"
+            android:id="@+id/textView_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/navy_blue"
+            android:paddingBottom="16dp" />
+
+        <!-- Nome Completo -->
+        <TextView
+            android:id="@+id/textView_emailLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emailLabel"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/navy_blue"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/textView_cpfLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cpf"
+            android:textSize="16sp"
+            android:textColor="@color/navy_blue"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/textView_cpf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
@@ -50,7 +90,7 @@
 
         <!-- Telefone -->
         <TextView
-            android:id="@+id/textView_PhoneLabel"
+            android:id="@+id/textView_phoneLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/telefone_cadastrado_label"
@@ -60,7 +100,7 @@
             android:paddingBottom="4dp" />
 
         <TextView
-            android:id="@+id/textView_Phone"
+            android:id="@+id/textView_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
@@ -70,7 +110,7 @@
 
         <!-- Endereço -->
         <TextView
-            android:id="@+id/textView_AddressLabel"
+            android:id="@+id/textView_addressLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/endereco_completo_label"
@@ -80,7 +120,7 @@
             android:paddingBottom="4dp" />
 
         <TextView
-            android:id="@+id/textView_Address"
+            android:id="@+id/textView_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""

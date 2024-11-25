@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjetoIntegradorUbs</string>
+    <string name="app_name">UBS+</string>
     <string name="login">Login</string>
     <string name="todo">TODO</string>
     <string name="entrar">Entrar</string>
@@ -52,6 +52,7 @@
     <string name="telefone_cadastrado_label">Telefone Cadastrado:</string>
     <string name="nome_completo_label">Nome Completo:</string>
     <string name="informacoes_pessoais">Informações pessoais</string>
+    <string name="emailLabel">E-mail</string>
     <string-array name="spinner_options">
         <item>Clinico Geral</item>
         <item>Dermatologista</item>

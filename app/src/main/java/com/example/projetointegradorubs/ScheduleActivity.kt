@@ -13,6 +13,7 @@ import com.example.projetointegradorubs.databinding.ActivityScheduleBinding
 class ScheduleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScheduleBinding
+    private var selectedSpecialty: String? = null // Variável para armazenar a especialidade selecionada
 
     private fun showProgressBar() {
         setContentView(R.layout.progress_layout)
@@ -32,12 +33,12 @@ class ScheduleActivity : AppCompatActivity() {
             this,
             R.array.spinner_options, // O array criado no strings.xml
             R.layout.spinner_selected_item // Layout para o item selecionado
-
         )
 
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         binding.spinnerSpecialty.adapter = adapter
 
+        // Listener para capturar a especialidade selecionada
         binding.spinnerSpecialty.onItemSelectedListener = object :
             android.widget.AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -46,23 +47,33 @@ class ScheduleActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                val selectedOption = parent?.getItemAtPosition(position).toString()
+                selectedSpecialty = parent?.getItemAtPosition(position).toString()
                 Toast.makeText(
                     this@ScheduleActivity,
-                    "Selecionado: $selectedOption",
+                    "Selecionado: $selectedSpecialty",
                     Toast.LENGTH_SHORT
                 ).show()
             }
 
             override fun onNothingSelected(parent: android.widget.AdapterView<*>?) {
-                // Ação quando nenhuma opção é selecionada (opcional)
+                // Nenhuma ação necessária aqui
             }
         }
 
         binding.buttonSchedule.setOnClickListener {
-            showProgressBar()
-            val intent = Intent(this, ChooseUBSActivity::class.java)
-            startActivity(intent)
+            if (selectedSpecialty.isNullOrEmpty()) {
+                Toast.makeText(
+                    this,
+                    "Por favor, selecione uma especialidade.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                showProgressBar()
+                // Passando a especialidade selecionada para a próxima Activity
+                val intent = Intent(this, ChooseUBSActivity::class.java)
+                intent.putExtra("selectedSpecialty", selectedSpecialty)
+                startActivity(intent)
+            }
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -70,13 +81,10 @@ class ScheduleActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
     }
 
     override fun onResume() {
         super.onResume()
-        // Parar a animação e esconder a ProgressBar quando voltar para esta Activity
-        hideProgressBar()
+        hideProgressBar() // Parar a animação e esconder a ProgressBar quando voltar para esta Activity
     }
-
 }

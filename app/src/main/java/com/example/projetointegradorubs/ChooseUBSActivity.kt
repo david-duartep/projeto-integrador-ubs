@@ -10,7 +10,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projetointegradorubs.databinding.ActivityChooseUbsBinding
 
-
 class ChooseUBSActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityChooseUbsBinding
@@ -21,6 +20,8 @@ class ChooseUBSActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
+
+        val selectedSpecialty = intent.getStringExtra("selectedSpecialty")
 
         binding.recyclerViewUBS.layoutManager = LinearLayoutManager(this)
         ubsList = listOf(
@@ -34,6 +35,8 @@ class ChooseUBSActivity : AppCompatActivity() {
             // Ação ao clicar em uma UBS
             Toast.makeText(this, "Selecionou: ${ubs.name}", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, CalendarActivity::class.java)
+            intent.putExtra("selectedUBS", ubs) // Passa a UBS selecionada para a próxima Activity
+            intent.putExtra("selectedSpecialty", selectedSpecialty)
             startActivity(intent)
         }
 

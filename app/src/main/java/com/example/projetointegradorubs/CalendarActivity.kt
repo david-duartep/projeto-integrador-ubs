@@ -16,6 +16,7 @@ import java.util.Locale
 class CalendarActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCalendarBinding
+    private lateinit var selectedUBS: UBS
     private var selectedDate: String? = null  // Variável para armazenar a data selecionada
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +24,9 @@ class CalendarActivity : AppCompatActivity() {
         binding = ActivityCalendarBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
+
+        val selectedSpecialty = intent.getStringExtra("selectedSpecialty")
+        selectedUBS = intent.getSerializableExtra("selectedUBS") as UBS
 
         // Inicialmente o botão não tem cor e está desativado
         binding.buttonSchedule.isEnabled = false
@@ -80,6 +84,8 @@ class CalendarActivity : AppCompatActivity() {
                 // Passa a data selecionada para a próxima Activity
                 val intent = Intent(this, AppointmentActivity::class.java)
                 intent.putExtra("SELECTED_DATE", selectedDate) // Passa a data
+                intent.putExtra("selectedUBS", selectedUBS)
+                intent.putExtra("selectedSpecialty", selectedSpecialty)
                 startActivity(intent)
             }
         }

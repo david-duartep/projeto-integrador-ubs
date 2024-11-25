@@ -8,8 +8,7 @@
     android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_vertical"
-    tools:context=".AppointmentDetailsActivity">
+    android:gravity="center_vertical" >
 
     <!-- RecyclerView para exibir a lista de compromissos -->
     <androidx.recyclerview.widget.RecyclerView

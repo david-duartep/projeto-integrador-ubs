@@ -4,11 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetointegradorubs.databinding.ItemUbsBinding
+import java.io.Serializable
 
-data class UBS(
-    val name: String,
-    val address: String
-)
+data class UBS(val name: String, val address: String) : Serializable
 
 class UBSAdapter(private val ubsList: List<UBS>, private val listener: (UBS) -> Unit) :
     RecyclerView.Adapter<UBSAdapter.UBSViewHolder>() {
