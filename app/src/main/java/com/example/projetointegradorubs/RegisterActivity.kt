@@ -11,6 +11,7 @@ import com.example.projetointegradorubs.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
+@Suppress("DEPRECATION")
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
@@ -102,5 +103,13 @@ class RegisterActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+    }
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // Volta para a tela de login
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish() // Encerra a atividade atual
     }
 }
