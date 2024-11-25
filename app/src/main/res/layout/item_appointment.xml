@@ -35,7 +35,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/textView_Time"
+        android:id="@+id/textView_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/navy_blue"

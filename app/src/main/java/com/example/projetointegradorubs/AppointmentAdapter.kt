@@ -19,7 +19,7 @@ class AppointmentAdapter(private val appointments: List<Appointment>) :
         val appointmentType: TextView = itemView.findViewById(R.id.textViewAppointmentType)
         val ubsName: TextView = itemView.findViewById(R.id.textViewUBS)
         val date: TextView = itemView.findViewById(R.id.textViewDate)
-        val time: TextView = itemView.findViewById(R.id.textView_Time)
+        val time: TextView = itemView.findViewById(R.id.textView_time)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppointmentViewHolder {
