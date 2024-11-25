@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "485107119901",
+    "project_id": "projeto-integrador-ubs",
+    "storage_bucket": "projeto-integrador-ubs.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485107119901:android:49c8e92981727937ba13f4",
+        "android_client_info": {
+          "package_name": "com.example.projetointegradorubs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQKCTpBbKtktdJEYa2pnq-y_sb6RtRxls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
